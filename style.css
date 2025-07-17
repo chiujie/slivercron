@@ -1,0 +1,78 @@
+/* --- 整體頁面設定 --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 使用更現代的字體 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 讓背景填滿整個視窗 */
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); /* 漂亮的漸層背景 */
+  color: #333; /* 主要文字顏色 */
+}
+
+/* --- 個人檔案容器 --- */
+.profile-container {
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+  padding: 40px;
+  border-radius: 15px; /* 圓角邊框 */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* 加上立體陰影 */
+  backdrop-filter: blur(4px); /* 模糊背景 (毛玻璃效果) */
+  -webkit-backdrop-filter: blur(4px); /* 針對 Safari 瀏覽器的相容性 */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center; /* 內部文字置中 */
+  max-width: 600px; /* 設定最大寬度，避免在寬螢幕上過寬 */
+  width: 90%; /* 在小螢幕上保持間距 */
+}
+
+/* --- 標題樣式 --- */
+h1 {
+  color: #0056b3; /* 標題顏色 */
+  margin-bottom: 20px;
+  font-size: 2.5em; /* 調整標題大小 */
+}
+
+/* --- 段落文字樣式 --- */
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* --- 社群連結區塊 --- */
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; /* 將連結垂直排列 */
+  gap: 15px; /* 連結之間的間距 */
+}
+
+/* --- 連結統一樣式 --- */
+.social-links a {
+  background-color: #007BFF; /* 連結背景色 */
+  color: white; /* 文字顏色 */
+  padding: 12px 20px;
+  text-decoration: none; /* 移除底線 */
+  border-radius: 8px; /* 圓角 */
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s; /* 平滑過渡效果 */
+  display: block; /* 讓整個區域都可以點擊 */
+}
+
+/* --- 滑鼠懸停在連結上的效果 --- */
+.social-links a:hover {
+  background-color: #0056b3; /* 加深背景色 */
+  transform: scale(1.05); /* 輕微放大 */
+}
+
+/* --- 為不同社群媒體設定不同顏色 (可選) --- */
+.social-links a[href*="instagram.com"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-links a[href*="facebook.com"] {
+    background-color: #1877F2;
+}
+
+.social-links a[href*="discord"] {
+    background-color: #5865F2;
+}
