@@ -7,7 +7,7 @@ body {
  justify-content: center;
  align-items: center;
  min-height: 100vh;
- background-image: url('806246.jpg'); /* 使用您的圖片 */
+ background-image: url('806246.png'); /* 使用您的圖片 */
  background-size: cover; /* 圖片填滿背景 */
  background-repeat: no-repeat; /* 不重複圖片 */
  background-position: center center; /* 圖片置中 */
