@@ -1,14 +1,17 @@
 /* --- 整體頁面設定 --- */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 使用更現代的字體 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* 讓背景填滿整個視窗 */
-  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); /* 漂亮的漸層背景 */
-  color: #333; /* 主要文字顏色 */
+ margin: 0;
+ padding: 0;
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ background-image: url('806246.jpg'); /* 使用您的圖片 */
+ background-size: cover; /* 圖片填滿背景 */
+ background-repeat: no-repeat; /* 不重複圖片 */
+ background-position: center center; /* 圖片置中 */
+ color: #333;
 }
 
 /* --- 個人檔案容器 --- */
