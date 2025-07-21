@@ -29,7 +29,12 @@
     <source src="1005.mp3" type="audio/mpeg">
     您的瀏覽器不支援音樂播放。
   </audio>
-  <button id="playMusic">播放音樂</button>
-  <script src="script.js"></script>
+  <script>
+    // 等待使用者第一次點擊頁面任意位置才播放音樂
+    document.addEventListener('click', function playOnce() {
+      document.getElementById('bgm').play();
+      document.removeEventListener('click', playOnce);
+    });
+  </script>
 </body>
 </html>
