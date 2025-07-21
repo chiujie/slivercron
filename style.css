@@ -11,13 +11,12 @@ body {
  background-size: cover; /* 圖片填滿背景 */
  background-repeat: no-repeat; /* 不重複圖片 */
  background-position: center center; /* 圖片置中 */
- background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
  color: #333;
 }
 
 /* --- 個人檔案容器 --- */
 .profile-container {
- 
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
   padding: 40px;
   border-radius: 15px; /* 圓角邊框 */
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* 加上立體陰影 */
