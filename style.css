@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100vh;
-  overflow: hidden; /* 避免影片或內容超出畫面 */
+  overflow: hidden;
   color: #333;
 }
 
@@ -15,8 +15,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 影片鋪滿背景 */
-  z-index: -1; /* 放在最底層 */
+  object-fit: cover;        /* 電腦版裁切鋪滿背景 */
+  object-position: center center;
+  z-index: -1;
+}
+
+/* 手機直式螢幕：顯示左半部 */
+@media (max-width: 768px) {
+  .bg-video {
+    object-fit: cover;
+    object-position: left center;  /* 左半部主要可視區域 */
+  }
 }
 
 /* --- 個人檔案容器 --- */
@@ -38,7 +47,7 @@ body {
   z-index: 1;
 }
 
-/* --- 標題樣式 --- */
+/* --- 標題 --- */
 h1 {
   color: #0056b3;
   margin-bottom: 20px;
