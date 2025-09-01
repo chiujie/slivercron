@@ -15,16 +15,23 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* 電腦版裁切鋪滿背景 */
-  object-position: center center;
+  object-fit: cover;        
+  object-position: center center; /* 電腦版置中裁切 */
   z-index: -1;
 }
 
 /* 手機直式螢幕：顯示左半部 */
 @media (max-width: 768px) {
   .bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;          /* 放大影片寬度兩倍 */
+    height: 100%;
     object-fit: cover;
-    object-position: left center;  /* 左半部主要可視區域 */
+    object-position: left center; /* 對齊左側 */
+    transform: translateX(0);     /* 可微調 */
+    z-index: -1;
   }
 }
 
