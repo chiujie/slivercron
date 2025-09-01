@@ -7,15 +7,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- 背景影片 -->
+  <video class="bg-video" autoplay loop playsinline>
+    <source src="bg.mp4" type="video/mp4">
+    您的瀏覽器不支援影片播放。
+  </video>
+
+  <!-- 主要內容 -->
   <div class="profile-container">
     <h1>GuanJie Chiu 個人檔案</h1>
     <p>歡迎來到我的個人頁面！</p>
 
-    <!-- 自我介紹欄 -->
     <div class="about-me">
       <h2>自我介紹</h2>
-      <p style="color: #3399ff;">大家好，我是GuanJie Chiu，熱愛科技、設計與分享生活。歡迎聯絡我或追蹤我的社群，更多資訊請參考下方連結！</p>
-      <p style="color: #3399ff;">加入DC後務必請告訴我您的大名，以便身分辨識</p>
+      <p class="intro">大家好，我是GuanJie Chiu，熱愛科技、設計與分享生活。歡迎聯絡我或追蹤我的社群，更多資訊請參考下方連結！</p>
+      <p class="intro">加入DC後務必請告訴我您的大名，以便身分辨識</p>
     </div>
 
     <div class="social-links">
@@ -25,16 +31,7 @@
       <a href="https://shopee.tw/slivercron?entryPoint=ShopBySearch&searchKeyword=slivercron" target="_blank">蝦皮賣場</a>
     </div>
   </div>
-   <audio id="bgm" loop style="display:none;">
-    <source src="1005.mp3" type="audio/mpeg">
-    您的瀏覽器不支援音樂播放。
-  </audio>
-  <script>
-    // 等待使用者第一次點擊頁面任意位置才播放音樂
-    document.addEventListener('click', function playOnce() {
-      document.getElementById('bgm').play();
-      document.removeEventListener('click', playOnce);
-    });
-  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
