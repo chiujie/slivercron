@@ -6,6 +6,7 @@ body {
   height: 100vh;
   overflow: hidden;
   color: #333;
+  background: #000; /* 當影片沒載入時，先顯示黑色背景 */
 }
 
 /* --- 背景影片 --- */
@@ -16,28 +17,21 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;        
-  object-position: center center; /* 電腦版置中裁切 */
+  object-position: center center; /* 電腦版預設置中 */
   z-index: -1;
 }
 
-/* 手機直式螢幕：顯示左半部 */
+/* --- 手機版 (直式螢幕) 微調人物位置 --- */
 @media (max-width: 768px) {
   .bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;          /* 放大影片寬度兩倍 */
-    height: 100%;
     object-fit: cover;
-    object-position: left center; /* 對齊左側 */
-    transform: translateX(-25);     /* 可微調 */
-    z-index: -1;
+    object-position: 30% bottom; /* 左右用百分比調整，數字越大越往右 */
   }
 }
 
 /* --- 個人檔案容器 --- */
 .profile-container {
-  background-color: rgba(255, 255, 255, 0.30);
+  background-color: rgba(255, 255, 255, 0.70);
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -50,7 +44,7 @@ body {
   margin: auto;
   position: relative;
   top: 50%;
-  transform: translateY(-25%);
+  transform: translateY(-50%);
   z-index: 1;
 }
 
@@ -109,11 +103,4 @@ p {
   background: linear-gradient(90deg, #ff5b00 0%, #ff9500 100%);
   color: #fff;
 }
-
-
-
-
-
-
-
 
